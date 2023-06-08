@@ -45,8 +45,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
 
 
 # Determine the Urls
-os.environ['MLFLOW_TRACKING_URI'] = 'http://localhost:5001/'
-os.environ['MLFLOW_S3_ENDPOINT_URL'] = 'http://localhost:9000/'
+os.environ['MLFLOW_TRACKING_URI'] = 'http://host.docker.internal:5001/'
+os.environ['MLFLOW_S3_ENDPOINT_URL'] = 'http://host.docker.internal:9000/'
 
 
 # Eveluation metric method

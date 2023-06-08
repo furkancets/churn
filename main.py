@@ -6,8 +6,8 @@ from mlflow.sklearn import load_model
 from database import engine, get_db, create_db_and_tables
 
 # Tell where is the tracking server and artifact server
-os.environ['MLFLOW_TRACKING_URI'] = 'http://localhost:5001/'
-os.environ['MLFLOW_S3_ENDPOINT_URL'] = 'http://localhost:9000/'
+os.environ['MLFLOW_TRACKING_URI'] = 'http://host.docker.internal:5001/'
+os.environ['MLFLOW_S3_ENDPOINT_URL'] = 'http://host.docker.internal:9000/'
 
 # Learn, decide and get model from mlflow model registry
 model_name = "ChrunModeling"

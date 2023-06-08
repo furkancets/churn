@@ -19,3 +19,15 @@ exit
 mysql -u train -p -D traindb
 
 uvicorn mainapp.main:app --host 0.0.0.0 --port 8002 --reload
+
+docker build -t fastapi-container . 
+
+docker run -p 8003:8000 fastapi-container
+
+terraform init
+
+terraform validate
+
+terraform plan
+
+terraform apply 
